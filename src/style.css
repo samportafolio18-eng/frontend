@@ -1,0 +1,57 @@
+:root {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color-scheme: dark;
+  color: #e8e8ec;
+  background: #0d0d10;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: #0d0d10;
+}
+
+#app {
+  width: 100%;
+}
+
+a {
+  color: #9b9bff;
+}
+
+/* Scroll suave + offset para que el header fijo no tape las secciones */
+html {
+  scroll-behavior: smooth;
+}
+section[id] {
+  scroll-margin-top: 78px;
+}
+
+/* Animación de aparición al hacer scroll (directiva v-reveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
