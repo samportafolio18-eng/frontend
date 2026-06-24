@@ -25,7 +25,7 @@ const { selected, open, close, go } = useLightbox(allItems)
 <template>
   <main>
     <header class="phead" :class="`phead--${kind}`">
-      <div class="phead__bg" :style="{ backgroundImage: `url(/decor/${kind}.jpg)` }"></div>
+      <div class="phead__bg" :style="{ backgroundImage: `url(/decor/${kind}-head.jpg)` }"></div>
       <div class="phead__veil"></div>
       <div class="phead__inner">
         <RouterLink to="/" class="phead__back">← Inicio</RouterLink>
