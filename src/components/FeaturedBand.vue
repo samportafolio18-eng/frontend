@@ -183,7 +183,7 @@ const artSrc = computed(() => `/decor/${props.kind}.jpg`)
   text-overflow: ellipsis;
 }
 
-/* Leyenda fija (nombre + colección): solo escultura y cerámica */
+/* Leyenda fija (nombre + colección): solo escultura y dibujo */
 .piece__meta {
   display: none;
   flex-direction: column;
@@ -380,7 +380,7 @@ const artSrc = computed(() => `/decor/${props.kind}.jpg`)
 }
 
 /* ============================================================
-   CERÁMICA — hornacinas con arco (vasijas) sobre una repisa
+   DIBUJO — hornacinas con arco sobre una repisa
    ============================================================ */
 .feat__layout--dibujo {
   align-items: flex-end;

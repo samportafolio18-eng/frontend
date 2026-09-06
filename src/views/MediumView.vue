@@ -168,7 +168,7 @@ const { selected, open, close, go } = useLightbox(allItems)
     radial-gradient(120% 120% at 78% 50%, transparent 55%, rgba(8, 5, 2, 0.8));
 }
 
-/* ===== CERÁMICA: hornacina con arco a la derecha ===== */
+/* ===== DIBUJO: hornacina con arco a la derecha ===== */
 .phead--dibujo {
   background: linear-gradient(180deg, #5a3a22, #2e1d11);
 }

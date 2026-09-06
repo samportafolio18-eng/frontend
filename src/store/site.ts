@@ -46,7 +46,7 @@ const DEFAULT_HOME: HomeContent = {
   heroTitle: 'Sumérgete en el arte de nuestra',
   heroScript: 'colección',
   heroLead:
-    'Un portafolio de pintura, fotografía, escultura y cerámica. Explora cada disciplina y descubre la obra una a una.',
+    'Un portafolio de pintura, fotografía, escultura y dibujo. Explora cada disciplina y descubre la obra una a una.',
   heroCta: 'Explorar colección',
   aboutTitle: 'Sobre la',
   aboutScript: 'galería',
@@ -89,7 +89,7 @@ function buildItem(a: any, cat: any, kind: CollectionKind): DisplayItem {
   const priceText =
     a.price != null ? `${a.currency} ${Number(a.price).toLocaleString()}` : null
   const meta: MetaRow[] = [
-    { label: 'Disciplina', value: KIND_META[kind].label },
+    { label: 'Disciplina', value: KIND_META[kind]?.label ?? '' },
     { label: 'Colección', value: cat.name },
   ]
   if (a.created_date) meta.push({ label: 'Año', value: String(a.created_date).slice(0, 4) })
@@ -168,6 +168,17 @@ export async function loadSite(): Promise<void> {
 
     const cats = catRes.data ?? []
     const arts = artRes.data ?? []
+
+    // Una colección cuya disciplina no exista en KIND_META no se puede pintar
+    // (no tiene etiqueta ni ruta). Antes reventaba la carga entera; ahora se
+    // avisa y se sigue con el resto.
+    const huerfanas = cats.filter((c: any) => !KIND_META[c.kind as CollectionKind])
+    if (huerfanas.length) {
+      console.warn(
+        '[site] colecciones con disciplina desconocida (no se mostrarán):',
+        huerfanas.map((c: any) => `${c.name} → kind="${c.kind}"`),
+      )
+    }
     const itemsByCat = new Map<number, DisplayItem[]>()
     const catById = new Map<number, any>()
     for (const c of cats) catById.set(c.id, c)
