@@ -169,10 +169,10 @@ const { selected, open, close, go } = useLightbox(allItems)
 }
 
 /* ===== CERÁMICA: hornacina con arco a la derecha ===== */
-.phead--ceramica {
+.phead--dibujo {
   background: linear-gradient(180deg, #5a3a22, #2e1d11);
 }
-.phead--ceramica .phead__bg {
+.phead--dibujo .phead__bg {
   left: auto;
   right: 7%;
   width: 38%;
@@ -184,7 +184,7 @@ const { selected, open, close, go } = useLightbox(allItems)
   border-radius: 240px 240px 0 0;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
-.phead--ceramica .phead__veil {
+.phead--dibujo .phead__veil {
   background: linear-gradient(90deg, #3a2416 46%, rgba(58, 36, 22, 0.4) 66%, transparent);
 }
 
@@ -196,7 +196,7 @@ const { selected, open, close, go } = useLightbox(allItems)
   }
   .phead--pintura .phead__bg,
   .phead--escultura .phead__bg,
-  .phead--ceramica .phead__bg {
+  .phead--dibujo .phead__bg {
     inset: 0;
     width: 100%;
     height: 100%;
@@ -209,7 +209,7 @@ const { selected, open, close, go } = useLightbox(allItems)
   }
   .phead--pintura .phead__veil,
   .phead--escultura .phead__veil,
-  .phead--ceramica .phead__veil,
+  .phead--dibujo .phead__veil,
   .phead--fotografia .phead__veil {
     background: linear-gradient(180deg, rgba(20, 12, 6, 0.45), rgba(20, 12, 6, 0.82));
   }

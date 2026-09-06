@@ -32,11 +32,11 @@ const router = createRouter({
       beforeEnter: mediumGuard('escultura'),
     },
     {
-      path: '/ceramicas',
-      name: 'ceramica',
+      path: '/dibujos',
+      name: 'dibujo',
       component: () => import('../views/MediumView.vue'),
-      props: { kind: 'ceramica' },
-      beforeEnter: mediumGuard('ceramica'),
+      props: { kind: 'dibujo' },
+      beforeEnter: mediumGuard('dibujo'),
     },
     {
       path: '/coleccion/:slug',

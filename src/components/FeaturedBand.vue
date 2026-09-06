@@ -205,7 +205,7 @@ const artSrc = computed(() => `/decor/${props.kind}.jpg`)
 /* Scroll horizontal para las disposiciones en fila */
 .feat__layout--pintura,
 .feat__layout--fotografia,
-.feat__layout--ceramica {
+.feat__layout--dibujo {
   display: flex;
   justify-content: safe center;
   overflow-x: auto;
@@ -214,12 +214,12 @@ const artSrc = computed(() => `/decor/${props.kind}.jpg`)
 }
 .feat__layout--pintura::-webkit-scrollbar,
 .feat__layout--fotografia::-webkit-scrollbar,
-.feat__layout--ceramica::-webkit-scrollbar {
+.feat__layout--dibujo::-webkit-scrollbar {
   height: 8px;
 }
 .feat__layout--pintura::-webkit-scrollbar-thumb,
 .feat__layout--fotografia::-webkit-scrollbar-thumb,
-.feat__layout--ceramica::-webkit-scrollbar-thumb {
+.feat__layout--dibujo::-webkit-scrollbar-thumb {
   background: #915530;
   border-radius: 999px;
 }
@@ -382,12 +382,12 @@ const artSrc = computed(() => `/decor/${props.kind}.jpg`)
 /* ============================================================
    CERÁMICA — hornacinas con arco (vasijas) sobre una repisa
    ============================================================ */
-.feat__layout--ceramica {
+.feat__layout--dibujo {
   align-items: flex-end;
   gap: 22px;
   padding: 26px 32px 36px;
 }
-.feat__layout--ceramica::after {
+.feat__layout--dibujo::after {
   content: '';
   position: absolute;
   left: 32px;
@@ -396,22 +396,22 @@ const artSrc = computed(() => `/decor/${props.kind}.jpg`)
   height: 2px;
   background: rgba(244, 236, 221, 0.25);
 }
-.feat--alt .feat__layout--ceramica::after {
+.feat--alt .feat__layout--dibujo::after {
   background: rgba(74, 39, 17, 0.2);
 }
-.feat--ceramica .piece__media {
+.feat--dibujo .piece__media {
   width: clamp(120px, 16vw, 172px);
   aspect-ratio: 4 / 5;
   border: 5px solid #f7efe2;
   border-radius: 110px 110px 12px 12px;
   box-shadow: 0 16px 32px rgba(74, 39, 17, 0.3);
 }
-.feat--ceramica .piece__meta {
+.feat--dibujo .piece__meta {
   display: flex;
   text-align: center;
   align-items: center;
 }
-.feat--ceramica .piece:hover .piece__media {
+.feat--dibujo .piece:hover .piece__media {
   transform: translateY(-6px);
 }
 
@@ -426,7 +426,7 @@ const artSrc = computed(() => `/decor/${props.kind}.jpg`)
   }
   .feat__layout--pintura,
   .feat__layout--fotografia,
-  .feat__layout--ceramica {
+  .feat__layout--dibujo {
     padding-left: 18px;
     padding-right: 18px;
   }
@@ -437,10 +437,10 @@ const artSrc = computed(() => `/decor/${props.kind}.jpg`)
   .feat--fotografia .piece__media {
     border-bottom-width: 22px;
   }
-  .feat--ceramica .piece__media {
+  .feat--dibujo .piece__media {
     border-radius: 80px 80px 10px 10px;
   }
-  .feat__layout--ceramica::after {
+  .feat__layout--dibujo::after {
     left: 18px;
     right: 18px;
     bottom: 30px;

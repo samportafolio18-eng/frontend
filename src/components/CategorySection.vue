@@ -176,7 +176,7 @@ const hasMore = computed(
 }
 
 /* CERÁMICA: nicho arqueado (evoca una vasija) con borde cálido suave */
-.art--ceramica .art__media {
+.art--dibujo .art__media {
   border: 6px solid #f7efe2;
   border-radius: 120px 120px 14px 14px;
   box-shadow: 0 16px 34px rgba(74, 39, 17, 0.26);
@@ -261,7 +261,7 @@ const hasMore = computed(
     border-width: 5px;
     border-bottom-width: 22px;
   }
-  .art--ceramica .art__media {
+  .art--dibujo .art__media {
     border-radius: 90px 90px 10px 10px;
   }
 }
